@@ -45,6 +45,9 @@ contract TwoPartyTransaction {
         uint commissionAmount = (amount * commissionRate) / 100;
         payable(contractOwner).transfer(commissionAmount);
     }
+        function getContractBalance() public view returns (uint) {
+    return address(this).balance;
+}
 
 
 
